@@ -285,6 +285,7 @@ class SessionManager(object):
             'daemon': self.daemon.logged_url(),
             'daemon_height': self.daemon.cached_height(),
             'db_height': self.db.db_height,
+            'db_flush_count': self.db.history.flush_count,
             'errors': sum(s.errors for s in self.sessions),
             'groups': len(group_map),
             'logged': len([s for s in self.sessions if s.log_me]),
